@@ -1,3 +1,7 @@
+/*
+Brendan Carlquist
+*/
+
 create database CASEBOOK_DB_d1;
 
 use CASEBOOK_DB_d1;
