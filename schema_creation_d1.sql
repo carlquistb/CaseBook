@@ -11,15 +11,15 @@ show databases;
 create table tblROLE
 	(
 		role_id int primary key auto_increment,
-        name varchar(100) not null unique,
-        descr varchar(500) not null,
-        term_length int not null,
-        key_1_cost float not null,
-        key_2_cost float not null,
-        key_3_cost float not null,
-        key_n_cost float not null
+		name varchar(100) not null unique,
+		descr varchar(500) not null,
+		term_length int not null,
+		key_1_cost float not null,
+		key_2_cost float not null,
+		key_3_cost float not null,
+		key_n_cost float not null
 	);
-    
+
 create table tblADDRESS
 	(
 		address_id int primary key auto_increment,
@@ -68,7 +68,7 @@ create table tblTRANSMITTAL
         transmit_number varchar(100) not null,
         note varchar(500)
 	);
-    
+
 create table tblPERSON
 	(
 		person_id int primary key auto_increment,
