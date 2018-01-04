@@ -23,7 +23,7 @@ create table tblROLE
 create table tblADDRESS
 	(
 		address_id int primary key auto_increment,
-        sreet_number varchar(100) not null,
+        street_number varchar(100) not null,
         street_name varchar(100) not null,
         city varchar(100) not null,
         state varchar(2) not null,
