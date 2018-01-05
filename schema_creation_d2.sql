@@ -2,6 +2,8 @@
 Brendan Carlquist
 */
 
+drop database CASEBOOK_DB_d2;
+
 create database CASEBOOK_DB_d2;
 
 use CASEBOOK_DB_d2;

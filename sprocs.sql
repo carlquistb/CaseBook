@@ -86,3 +86,33 @@ begin
 	insert into tblROLE (object_name, descr, term_length, key_1_cost, key_2_cost, key_3_cost, key_4_cost, key_n_cost)
     values (p_name, p_descr, p_term_length, p_key_1_cost, p_key_2_cost, p_key_3_cost, p_key_4_cost, p_key_n_cost);
 end$$
+
+create procedure usp_insert_person_role
+	(
+		p_person_id int,
+        p_role_id int,
+        p_start_date date,
+        p_end_date date,
+        p_role_id_number varchar(100)
+	)
+begin
+	insert into tblPERSON_ROLE (person_id, role_id, start_date, end_date, role_id_number)
+    values (p_person_id, p_role_id, p_start_date, p_end_date, p_role_id_number);
+end$$
+
+create procedure usp_insert_rental
+	(
+		p_renter_id int,
+        p_emp_id int, 
+        p_approver_id int, 
+        p_eq_id int,
+        p_exp_ret_date date, 
+        p_end_date date, 
+        p_begin_date date, 
+        p_deposit_amount decimal(13,2), 
+        p_refund_amount decimal(13,2)
+	)
+begin
+	insert into tblRENTAL (renter_id, emp_id, approver_id, eq_id, exp_ret_date, end_date, begin_date, deposit_amount, refund_amount)
+    values (p_renter_id, p_emp_id, p_approver_id, p_eq_id, p_exp_ret_date, p_end_date, p_begin_date, p_deposit_amount, p_refund_amount);
+end$$
