@@ -116,3 +116,47 @@ begin
 	insert into tblRENTAL (renter_id, emp_id, approver_id, eq_id, exp_ret_date, end_date, begin_date, deposit_amount, refund_amount)
     values (p_renter_id, p_emp_id, p_approver_id, p_eq_id, p_exp_ret_date, p_end_date, p_begin_date, p_deposit_amount, p_refund_amount);
 end$$
+
+create procedure usp_insert_rental_note
+	(
+		p_rental_id int,
+        p_writer_id int,
+        p_note varchar(500),
+        p_init_date date
+    )
+begin
+	insert into tblRENTAL_NOTE (rental_id, writer_id, note, init_date)
+    values (p_rental_id, p_writer_id, p_note, p_init_date);
+end$$
+
+create procedure usp_insert_transmittal
+	(
+		p_total_amount decimal(13,2), 
+        p_transmit_date date, 
+        p_transmit_number varchar(100), 
+        p_note varchar(500)
+    )
+begin
+	insert into tblTRANSMITTAL (total_amount, transmit_date, transmit_number, note)
+    values (p_transmittal_id, p_total_amount, p_transmit_date, p_transmit_number, p_note);
+end$$
+
+create procedure usp_insert_rental_transmittal
+	(
+		p_rental_id int,
+        p_transmittal_id int
+    )
+begin
+	insert into tblRENTAL_TRANSMITTAL (rental_id, transmittal_id)
+    values (p_rental_id, p_transmittal_id);
+end$$
+
+create procedure usp_insert_sig
+	(
+		p_file_path varchar(100),
+        p_rental_id int
+	)
+begin
+	insert into tblSIG (file_path, rental_id)
+    values (p_file_path, p_rental_id);
+end$$
