@@ -12,7 +12,19 @@ create procedure usp_insert_EQ_TYPE
 		p_term_length int
     )
 begin
-	insert into tblEQ_TYPE (object_name,descr,term_length) values (p_name,p_descr,p_term_length);
+	if(p_term_length is not null) then 
+		if(p_descr is not null) then 
+			insert into tblEQ_TYPE (object_name,descr,term_length) values (p_name,p_descr,p_term_length); 
+		else 
+			insert into tblEQ_TYPE (object_name,descr,term_length) values (p_name,'NULL',p_term_length);
+		end if;
+    else 
+		if(p_descr is not null) then
+			insert into tblEQ_TYPE (object_name, descr, term_length) values (p_name, p_descr, '365');
+		else
+			insert into tblEQ_TYPE (object_name, descr, term_length) values (p_name, 'NULL', '365');
+		end if;
+	end if;
 end$$
 
 create procedure usp_insert_EQ_SUBTYPE
