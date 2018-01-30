@@ -1,5 +1,6 @@
+use master
+drop database CaseBook_v1
 create database CaseBook_v1
-
 use CaseBook_v1
 
 CREATE TABLE tblEQ_TYPE 
@@ -13,7 +14,7 @@ GO
 
 CREATE TABLE tblEQ_SUBTYPE
 	(
-		[EQ_SUBTYPE_id] INT IDENTITY(1,1) PRIMARY KEY,
+		[EQ_SUBTYPE_ID] INT IDENTITY(1,1) PRIMARY KEY,
 		[EQ_TYPE_ID] INT NOT NULL FOREIGN KEY REFERENCES tblEQ_TYPE([EQ_TYPE_ID]),
 		[NAME] NVARCHAR(100) NOT NULL,
 		[MODEL] NVARCHAR(100),
@@ -40,7 +41,7 @@ CREATE TABLE tblADDRESS
 		[CITY] nvarchar(100),
 		[STATE] nvarchar(100),
 		[ZIPCODE] nvarchar(100),
-		[DATE] nvarchar(100)
+		[DATE] date
 	)
 go
 
@@ -65,7 +66,8 @@ create table tblTRANSMITTAL
 		[TRANSMITTAL_ID] int identity(1,1) primary key,
 		[TOTAL_AMOUNT] money not null,
 		[DATE] date not null,
-		[NOTE] nvarchar(500)
+		[NOTE] nvarchar(500),
+		[NUMBER] varchar(100) not null
 	)
 go
 
@@ -99,6 +101,7 @@ create table tblPERSON_ROLE
 		[ROLE_ID] int not null foreign key references [tblROLE]([ROLE_ID]),
 		[START_DATE] date not null,
 		[END_DATE] date,
+		[EXP_END_DATE] date,
 		[ROLE_ID_NUMBER] nvarchar(100)
 	)
 go
