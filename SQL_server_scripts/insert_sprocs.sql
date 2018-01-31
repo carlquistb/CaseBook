@@ -81,7 +81,7 @@ create procedure uspINSERT_PERSON_ROLE
 		@start date,
 		@end date,
 		@exp date,
-		@role_number nvarchar(100)
+		@role_number nvarchar(100) 
 	)
 as
 	insert into tblPERSON_ROLE ([PERSON_ID],[ROLE_ID],[START_DATE],[END_DATE],[EXP_END_DATE],[ROLE_ID_NUMBER])
