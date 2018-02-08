@@ -113,7 +113,7 @@ create table [tblPERSON_ROLE]
 	(
 		P_R_ID int identity(1,1),
 		PersonID int not null,
-		RoleID int not null),
+		RoleID int not null,
 		BeginDate date,
 		EndDate date
 
