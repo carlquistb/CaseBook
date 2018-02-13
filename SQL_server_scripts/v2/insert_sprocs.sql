@@ -1,6 +1,3 @@
-use CASEBOOK_V2_1
-go
-
 create procedure usp_insFACILITY_TYPE
 	(
 		@FacilityTypeName nvarchar(100),
@@ -10,10 +7,11 @@ as
 	begin
 	begin tran t1
 	begin try
-	INSERT INTO [dbo].[tblFACILITY_TYPE] 
-		(FacilityTypeName,FacilityTypeDescr)
-    VALUES
-		(@FacilityTypeName,@FacilityTypeDescr)
+		INSERT INTO [dbo].[tblFACILITY_TYPE] 
+			(FacilityTypeName,FacilityTypeDescr)
+		VALUES
+			(@FacilityTypeName,@FacilityTypeDescr)
+		commit tran t1
 	end try
 	begin catch
 		print 'Error: Insertion to the FacilityType table failed.'

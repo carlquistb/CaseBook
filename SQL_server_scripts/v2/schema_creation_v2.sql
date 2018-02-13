@@ -1,11 +1,3 @@
-use master
-go
-drop database CASEBOOK_V2
-go
-create database CASEBOOK_V2
-go
-use CASEBOOK_V2
-go
 create table [tblFACILITY_TYPE]
 	(
 		FacilityTypeID int identity(1,1),
@@ -37,6 +29,7 @@ create table [tblEQUIPMENT_SUBTYPE]
 		EquipmentSubtypeID int identity(1,1),
 		EquipmentSubtypeName nvarchar(100) not null,
 		EquipmentSubtypeDescr nvarchar(500),
+		EquipmentReplacementCost money,
 		EquipmentTypeID int not null
 
 		constraint pk_tblEQUIPMENT_SUBTYPE primary key (EquipmentSubtypeID),
@@ -47,7 +40,6 @@ create table [tblEQUIPMENT]
 		EquipmentID int identity(1,1),
 		EquipmentName nvarchar(100) not null,
 		EquipmentDescr nvarchar(500),
-		ReplacementCost money,
 		EquipmentSubtypeID int not null
 
 		constraint pk_tblEQUIPMENT primary key (EquipmentID)
@@ -96,7 +88,7 @@ create table [tblPERSON]
 		Fname nvarchar(100) not null,
 		Lname nvarchar(100) not null,
 		Mname nvarchar(100),
-		BirthDate date not null,
+		DOB date not null,
 		Email nvarchar(500)
 
 		constraint pk_tblPERSON primary key (PersonID)
@@ -105,7 +97,8 @@ create table [tblROLE]
 	(
 		RoleID int identity(1,1),
 		RoleName nvarchar(100) not null,
-		RoleDescr nvarchar(500)
+		RoleDescr nvarchar(500),
+		RoleDefaultDuration int
 
 		constraint pk_tblROLE primary key (RoleID)
 	)
