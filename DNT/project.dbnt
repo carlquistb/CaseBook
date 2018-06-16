@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DatabaseNoteTakerProject>
+	<Project>
+		<Setting key="saveConnectionSettingsSeparately" value="False" />
+		<Setting key="saveOneFilePerObject" value="False" />
+		<Setting key="saveObjectHistory" value="True" />
+		<Setting key="publishPath" value="" />
+		<Setting key="publishXSLPath" value="" />
+		<Setting key="includeFilter"></Setting>
+		<Setting key="excludeFilter"></Setting>
+	</Project>
+	<Connection Type="Microsoft SQL Server">
+		<AuthType>windows</AuthType>
+		<Database>casebook_v3</Database>
+		<Password />
+		<Server>.</Server>
+		<StorePassword>false</StorePassword>
+		<User></User>
+	</Connection>
+	<Model Name="CaseBook">
+		<Group Type="Table">
+			<Object Name="dbo.MOCK_DATA" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="email" null="not null" sortOrder="5" type="nvarchar(50)" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="first" null="not null" sortOrder="2" type="nvarchar(50)" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="id" null="not null" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="last" null="not null" sortOrder="4" type="nvarchar(50)" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="middle" null="null" sortOrder="3" type="nvarchar(50)" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="phone" null="not null" sortOrder="6" type="nvarchar(50)" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 6 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblAUTHORIZER" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="AuthorizerID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EqSubtypeID" null="not null" sortOrder="3" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="PersonRoleID" null="not null" sortOrder="2" type="int" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 3 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblDISBURSE" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="Amount" null="null" sortOrder="3" type="money" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="DisburseID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="PersonRoleID" null="not null" sortOrder="2" type="int" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 3 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblEMAIL" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EmailContents" null="null" sortOrder="3" type="nvarchar(1000)" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EmailID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EmailName" null="not null" sortOrder="2" type="nvarchar(50)" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 3 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblEMAIL_RENTAL" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EmailID" null="not null" sortOrder="2" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EmailRentalID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EmployeeID" null="not null" sortOrder="5" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="RentalID" null="not null" sortOrder="3" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="SentDate" null="not null" sortOrder="4" type="date" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 5 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblEQ" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EqID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EqInitDate" null="not null" sortOrder="4" type="date" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EqSubtypeID" null="not null" sortOrder="2" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="Serial" null="not null" sortOrder="3" type="int" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 4 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblEQ_SUBTYPE" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="DefaultRentalLength" null="null" sortOrder="4" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EqSubtypeID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EqSubtypeName" null="not null" sortOrder="3" type="nvarchar(50)" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EqTypeID" null="not null" sortOrder="2" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="ReplaceCost" null="null" sortOrder="5" type="money" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 5 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblEQ_TYPE" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="DefaultRentalLength" null="null" sortOrder="3" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EqTypeID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EqTypeName" null="not null" sortOrder="2" type="nvarchar(50)" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 3 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblPERSON" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="Email" null="not null" sortOrder="5" type="nvarchar(100)" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="FName" null="not null" sortOrder="2" type="nvarchar(50)" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="LName" null="not null" sortOrder="4" type="nvarchar(50)" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="MName" null="null" sortOrder="3" type="nvarchar(50)" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="PersonID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="Phone" null="null" sortOrder="6" type="nvarchar(50)" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 6 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblPERSON_ROLE" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="BeginDate" null="not null" sortOrder="4" type="date" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EndDate" null="null" sortOrder="6" type="date" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="ExpEndDate" null="not null" sortOrder="5" type="date" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="PersonID" null="not null" sortOrder="2" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="PersonRoleID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="RoleID" null="not null" sortOrder="3" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="RoleRef" null="null" sortOrder="7" type="nvarchar(50)" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 7 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblRENTAL" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="AuthorizerID" null="not null" sortOrder="6" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EmployeeID" null="not null" sortOrder="5" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="EqID" null="not null" sortOrder="2" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="fee" null="not null" sortOrder="3" type="money" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="RentalID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="RenterID" null="not null" sortOrder="4" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="TransmitalID" null="not null" sortOrder="7" type="int" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 7 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblROLE" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="default_term" null="null" sortOrder="2" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="descr" null="null" sortOrder="3" type="nvarchar(500)" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="RoleID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="RoleName" null="not null" sortOrder="4" type="nvarchar(50)" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 4 attributes" />
+				</History>
+			</Object>
+			<Object Name="dbo.tblTRANSMITAL" Created="2018-06-08T16:23:26" CommentModified="2018-06-08T16:23:26" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="TransmitalID" null="not null" pk="true" sortOrder="1" type="int" />
+					<Attribute created="2018-06-08T16:23:26" modified="2018-06-08T16:23:26" name="TransmitalRef" null="not null" sortOrder="2" type="nvarchar(50)" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:26" Who="Carlq" Description="Loaded 2 attributes" />
+				</History>
+			</Object>
+		</Group>
+		<Group Type="StoredProcedure">
+			<Object Name="dbo.usp_insRole" Created="2018-06-08T16:23:27" CommentModified="2018-06-08T16:23:27" CommentModifiedBy="">
+				<Attributes>
+					<Attribute created="2018-06-08T16:23:27" modified="2018-06-08T16:23:27" name="@def_term" sortOrder="2" type="int" />
+					<Attribute created="2018-06-08T16:23:27" modified="2018-06-08T16:23:27" name="@description" sortOrder="3" type="nvarchar" />
+					<Attribute created="2018-06-08T16:23:27" modified="2018-06-08T16:23:27" name="@name" sortOrder="1" type="nvarchar" />
+				</Attributes>
+				<History>
+					<Record When="2018-06-08T16:23:27" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:23:27" Who="Carlq" Description="Loaded 3 attributes" />
+				</History>
+			</Object>
+		</Group>
+		<Group Type="Schema">
+			<Object Name="db_owner" Created="2018-06-08T16:23:27" CommentModified="2018-06-08T16:23:27" CommentModifiedBy="">
+				<Comment>we don't really care about Schemas much.</Comment>
+				<Attributes />
+				<History>
+					<Record When="2018-06-08T16:23:27" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:24:40" Who="Carlq" Description="Changed object comment" />
+				</History>
+			</Object>
+			<Object Name="dbo" Created="2018-06-08T16:23:27" CommentModified="2018-06-08T16:23:27" CommentModifiedBy="">
+				<Comment>we don't really care about schemas much.</Comment>
+				<Attributes />
+				<History>
+					<Record When="2018-06-08T16:23:27" Who="Carlq" Description="Loaded" />
+					<Record When="2018-06-08T16:24:21" Who="Carlq" Description="Changed object comment" />
+				</History>
+			</Object>
+		</Group>
+	</Model>
+</DatabaseNoteTakerProject>
