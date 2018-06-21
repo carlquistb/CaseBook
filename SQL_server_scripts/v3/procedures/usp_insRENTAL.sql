@@ -17,6 +17,45 @@ create procedure usp_insRENTAL
 	)
 as
 
-execute usp_getPERSON_ROLEID
---obtain values
+--Renter
+declare @RenterID int
+execute usp_getPERSONROLEID 
+	@First = @RenterFName, 
+	@Last = @RenterLName,
+	@DOB = @RenterDOB,
+	@Role = @RenterRoleName,
+	@ID = @RenterID
+
+--Authorizer
+declare @AuthorizerID int
+execute usp_getPERSONROLEID 
+	@First = @AuthorizerFName, 
+	@Last = @AuthorizerLName,
+	@DOB = @AuthorizerDOB,
+	@Role = @AuthorizerRoleName,
+	@ID = @AuthorizerID 
+
+--EQ
+declare @EQID int
+execute usp_getEQID 
+	@Serial = @EqSerial, 
+	@EqSubtype = @EqSubType, 
+	@EqID = @EQID
+
+--Employee
+declare @EmployeeID int
+execute usp_getPERSONROLEID 
+	@First = @EmployeeFName, 
+	@Last = @EmployeeLName,
+	@DOB = @EmployeeDOB,
+	@Role = @EmployeeRoleName,
+	@ID = @EmployeeID
+
+-- insert rental.
+execute usp_insRENTAL_internal
+	@RenterID = @RenterID,
+	@EmployeeID = @EmployeeID,
+	@EqID = @EQID,
+	@AuthorizerID = @AuthorizerID
+
 go
